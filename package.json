@@ -1,0 +1,42 @@
+{
+  "name": "cms-blog",
+  "version": "0.0.1",
+  "description": "Blog with administration",
+  "main": "app.js",
+  "scripts": {
+    "start": "parallelshell \"npm run watch-server\" \"npm run browser-sync\" \"npm run watch-js\" \"npm run watch-css\"",
+    "build-css": "npm run scss && npm run autoprefixer",
+    "scss": "node-sass --output-style compressed --include-path scss public/scss/main.scss public/css/main.css",
+    "autoprefixer": "postcss -u autoprefixer -r public/css/*",
+    "watch-server": "nodemon app.js",
+    "watch-css": "onchange \"public/scss/*.scss\" -- npm run build-css",
+    "watch-js": "simplifyify  public/app/app.js -o public/js/app.min.js --minify --debug --watch",
+    "browser-sync": "browser-sync start --proxy localhost:3000 --files public/css public/js public/views public/img",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "blog",
+    "actu",
+    "cms"
+  ],
+  "author": "Raphaël Choquet",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^1.21.0",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "lodash": "^4.13.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.7",
+    "browser-sync": "^2.13.0",
+    "browserify": "^13.0.1",
+    "exorcist": "^0.4.0",
+    "nodemon": "^1.9.2",
+    "onchange": "^2.5.0",
+    "parallelshell": "^2.0.0",
+    "postcss-cli": "^2.5.2",
+    "simplifyify": "^2.0.1",
+    "watchify": "^3.7.0"
+  }
+}

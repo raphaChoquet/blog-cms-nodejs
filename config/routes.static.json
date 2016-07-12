@@ -1,0 +1,10 @@
+[{
+    "path": "/js",
+    "folder": "/public/js"
+}, {
+    "path": "/css",
+    "folder": "/public/css"
+}, {
+    "path": "/img",
+    "folder": "/public/img"
+}]
