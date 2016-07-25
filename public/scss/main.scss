@@ -1,0 +1,79 @@
+/* ==========================================================================
+   INUITCSS
+   ========================================================================== */
+/*!*
+ * inuitcss, by @csswizardry
+ *
+ * github.com/inuitcss | inuitcss.com
+ */
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Global...............Globally-available project settings.
+ */
+@import 'settings/settings.global';
+
+/**
+ * TOOLS
+ * Functions............A small collection of useful functions.
+ * Mixins...............Globally-available mixins.
+ * Widths...............A mixin to quickly generate an arbitrary number of width
+ *                      classes for use alongside our grid system.
+ */
+@import 'tools/tools.functions';
+@import 'tools/tools.mixins';
+@import 'tools/tools.widths';
+
+/**
+ * GENERIC
+ * Box-sizing...........Better default `box-sizing`.
+ * Normalize.css........A level playing field using @necolas’ Normalize.css.
+ * Reset................A tiny reset to complement Normalize.css.
+ * Shared...............Sensibly and tersely share some global commonalities
+ *                      (particularly useful when managing vertical rhythm).
+ */
+@import 'generic/generic.box-sizing';
+@import 'generic/generic.normalize';
+@import 'generic/generic.reset';
+@import 'generic/generic.shared';
+
+/**
+ * ELEMENTS
+ * Page.................Set up our document’s default `font-size` and
+ *                      `line-height`.
+ * Headings.............Very minimal (i.e. only font-size information) for
+ *                      headings 1 through 6.
+ * Images...............Base image styles.
+ * Tables...............Simple table styles.
+ *
+ *
+ */
+@import 'elements/elements.page';
+@import 'elements/elements.headings';
+@import 'elements/elements.images';
+@import 'elements/elements.tables';
+/**
+ * COMPONENTS
+ *
+*/
+
+
+
+/**
+ * UTILITIES
+ * Clearfix.............Bind our clearfix onto a utility class.
+ * Widths...............Simple width helper classes.
+ * Headings.............Reassigning our heading styles to helper classes.
+ * Spacing..............Nudge bits of the DOM around with these spacing
+ *                      classes.
+ * Print................Reset-like styles taken from the HTML5 Boilerplate.
+ *                      classes..
+ * Hide.................Helper classes to hide content
+ */
+@import 'utilities/utilities.clearfix';
+@import 'utilities/utilities.widths';
+@import 'utilities/utilities.headings';
+@import 'utilities/utilities.spacing';
+@import 'utilities/utilities.print';
+@import 'utilities/utilities.hide';

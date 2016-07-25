@@ -9,9 +9,9 @@
     "scss": "node-sass --output-style compressed --include-path scss public/scss/main.scss public/css/main.css",
     "autoprefixer": "postcss -u autoprefixer -r public/css/*",
     "watch-server": "nodemon app.js",
-    "watch-css": "onchange \"public/scss/*.scss\" -- npm run build-css",
+    "watch-css": "onchange \"public/scss/**/*.scss\" -- npm run build-css",
     "watch-js": "simplifyify  public/app/app.js -o public/js/app.min.js --minify --debug --watch",
-    "browser-sync": "browser-sync start --proxy localhost:3000 --files public/css public/js public/views public/img",
+    "browser-sync": "browser-sync start --proxy localhost:8080 --files public/css public/js public/views public/img",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

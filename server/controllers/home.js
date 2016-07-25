@@ -6,7 +6,7 @@ module.exports = function (app) {
     };
 
     function homeController(req, res) {
-        app.views.render(res, 'index', 'html');
+        app.views.render(res, 'index');
     }
 
 };
