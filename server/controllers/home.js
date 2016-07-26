@@ -6,7 +6,13 @@ module.exports = function (app) {
     };
 
     function homeController(req, res) {
-        app.views.render(res, 'index');
+        var User = app.manager.getModel('User');
+        User.find({}, function(err, users) {
+            if (err) throw err;
+            // object of all the users
+            app.views.render(res, 'index', {'users': users});
+        });
+
     }
 
 };

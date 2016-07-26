@@ -12,9 +12,10 @@ module.exports = function(app) {
         /// FUNCTION ///
         create: function() {
             this.express = express();
-            this.port = process.env.PORT || 8080;
             this.express.use(bodyParser.urlencoded({ extended: true }));
             this.express.use(bodyParser.json());
+            this.port = process.env.PORT || 8080;
+            app.manager.create();
             this.instance = http.Server(this.express);
             app.views.setup();
             app.routes.create();
@@ -22,8 +23,9 @@ module.exports = function(app) {
         },
 
         listen: function() {
+            var self = this;
             this.instance.listen(this.port, function() {
-                console.log('Server listening on *:' + this.port);
+                console.log('Server listening on *:' + self.port);
             });
         }
     };

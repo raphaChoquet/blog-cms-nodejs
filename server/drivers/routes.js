@@ -5,7 +5,6 @@ module.exports = function (app) {
 
     return {
         create: function ()  {
-            app.server.express.use('/', express.static(app.root + '/public'));
             var controllerFiles = fs.readdirSync(app.root + '/server/controllers');
             controllerFiles.forEach(function (controllerFile) {
                 if (controllerFile.indexOf('.js') === -1) {
